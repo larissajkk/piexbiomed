@@ -1,0 +1,218 @@
+
+/* ===== CONFIGURAÇÕES GERAIS ===== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f1f7f2;
+    color: #333;
+    line-height: 1.7;
+}
+
+/* ===== CABEÇALHO ===== */
+
+header {
+    background: linear-gradient(135deg, #145c35, #26834d);
+    color: white;
+    text-align: center;
+    padding: 35px 20px 25px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+}
+
+header h1 {
+    font-size: 34px;
+    margin-bottom: 20px;
+    animation: surgir 1s ease;
+}
+
+/* ===== MENU ===== */
+
+nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 18px;
+    border-radius: 25px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    background: white;
+    color: #186b3b;
+    transform: translateY(-4px);
+}
+
+/* ===== CONTEÚDO ===== */
+
+main {
+    max-width: 1050px;
+    margin: 40px auto;
+    padding: 35px;
+    background: white;
+    border-radius: 18px;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+    animation: surgir 1s ease;
+}
+
+section {
+    margin-bottom: 35px;
+}
+
+/* ===== TÍTULOS ===== */
+
+h2 {
+    color: #186b3b;
+    font-size: 23px;
+    margin-top: 25px;
+    margin-bottom: 15px;
+    padding-left: 12px;
+    border-left: 5px solid #54a96d;
+    transition: 0.3s;
+}
+
+h2:hover {
+    color: #269653;
+    padding-left: 18px;
+}
+
+/* ===== PARÁGRAFOS ===== */
+
+p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 18px;
+    text-align: justify;
+}
+
+/* ===== CARDS INTERATIVOS ===== */
+
+.card {
+    background: #f5faf6;
+    border-left: 5px solid #26834d;
+    border-radius: 12px;
+    padding: 22px;
+    margin: 20px 0;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+    animation: surgir 0.8s ease;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 20px rgba(38,131,77,0.15);
+    background: #eaf5ed;
+}
+
+.card h2 {
+    margin-top: 0;
+    font-size: 20px;
+}
+
+.card p {
+    margin-bottom: 0;
+}
+
+/* ===== ANIMAÇÕES ===== */
+
+@keyframes surgir {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===== RODAPÉ ===== */
+
+footer {
+    background: #145c35;
+    color: white;
+    text-align: center;
+    padding: 22px;
+    margin-top: 40px;
+}
+
+footer p {
+    color: white;
+    text-align: center;
+    margin: 0;
+}
+
+/* ===== RESPONSIVIDADE ===== */
+
+@media (max-width: 768px) {
+
+    header h1 {
+        font-size: 25px;
+    }
+
+    nav {
+        gap: 5px;
+    }
+
+    nav a {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+
+    main {
+        margin: 20px 12px;
+        padding: 22px;
+    }
+
+    h2 {
+        font-size: 19px;
+    }
+
+    .card {
+        padding: 17px;
+    }
+
+    p {
+        font-size: 15px;
+    }
+}
+
+/* ===== ACESSIBILIDADE ===== */
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation: none !important;
+        transition: none !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+
+/* Animação dos cartões durante a rolagem */
+
+.card.animar {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.card.visivel {
+    opacity: 1;
+    transform: translateY(0);
+}
